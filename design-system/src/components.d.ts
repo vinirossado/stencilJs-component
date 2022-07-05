@@ -10,6 +10,13 @@ export namespace Components {
         "appearance": string;
         "text": string;
     }
+    interface DesignModal {
+        "appearance": string;
+        "buttons": string;
+        "closeIcon": string;
+        "header": string;
+        "isOpen": boolean;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -25,12 +32,22 @@ export namespace Components {
         "middle": string;
     }
 }
+export interface DesignModalCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDesignModalElement;
+}
 declare global {
     interface HTMLDesignButtonElement extends Components.DesignButton, HTMLStencilElement {
     }
     var HTMLDesignButtonElement: {
         prototype: HTMLDesignButtonElement;
         new (): HTMLDesignButtonElement;
+    };
+    interface HTMLDesignModalElement extends Components.DesignModal, HTMLStencilElement {
+    }
+    var HTMLDesignModalElement: {
+        prototype: HTMLDesignModalElement;
+        new (): HTMLDesignModalElement;
     };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
@@ -40,6 +57,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "design-button": HTMLDesignButtonElement;
+        "design-modal": HTMLDesignModalElement;
         "my-component": HTMLMyComponentElement;
     }
 }
@@ -47,6 +65,14 @@ declare namespace LocalJSX {
     interface DesignButton {
         "appearance"?: string;
         "text"?: string;
+    }
+    interface DesignModal {
+        "appearance"?: string;
+        "buttons"?: string;
+        "closeIcon"?: string;
+        "header"?: string;
+        "isOpen"?: boolean;
+        "onAction"?: (event: DesignModalCustomEvent<any>) => void;
     }
     interface MyComponent {
         /**
@@ -64,6 +90,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "design-button": DesignButton;
+        "design-modal": DesignModal;
         "my-component": MyComponent;
     }
 }
@@ -72,6 +99,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "design-button": LocalJSX.DesignButton & JSXBase.HTMLAttributes<HTMLDesignButtonElement>;
+            "design-modal": LocalJSX.DesignModal & JSXBase.HTMLAttributes<HTMLDesignModalElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
