@@ -18,7 +18,23 @@
     </div>
     <div class="row space-between">
       <design-button text="Open modal" appearance="primary"></design-button>
-      <design-modal buttons='[{"text": "Confirm"}, {"text":"Cancel"}]' header="Hello Youtube" appearance="danger"> Body Content CHANGE</design-modal>
+      <design-modal buttons='[{"text": "Confirm"}, {"text":"Cancel"}]' header="Modal Header" appearance="primary">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Nibh venenatis cras sed felis eget velit aliquet sagittis. A erat nam at lectus urna. Cursus eget nunc scelerisque viverra mauris in aliquam.
+        Sit amet cursus sit amet dictum sit. Molestie a iaculis at erat. Sollicitudin ac orci phasellus egestas tellus rutrum tellus.
+        Sem nulla pharetra diam sit amet nisl suscipit. Vitae semper quis lectus nulla at volutpat diam ut venenatis
+        Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Aliquam id diam maecenas ultricies mi eget mauris pharetra et.
+        Nibh tortor id aliquet lectus proin nibh. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sodales ut etiam sit amet nisl purus.
+        Nisl tincidunt eget nullam non nisi est sit amet facilisis. Luctus accumsan tortor posuere ac.
+        Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Parturient montes nascetur ridiculus mus.
+        Velit euismod in pellentesque massa placerat duis ultricies. Bibendum est ultricies integer quis auctor elit.
+        Dis parturient montes nascetur ridiculus mus mauris vitae. Iaculis eu non diam phasellus vestibulum lorem sed risus.
+        Non sodales neque sodales ut etiam sit. Congue eu consequat ac felis donec et. Ultrices vitae auctor eu augue ut.
+        Aliquam ultrices sagittis orci a scelerisque purus semper. Vitae tempus quam pellentesque nec. Neque volutpat ac tincidunt vitae semper quis lectus.
+        Fusce id velit ut tortor pretium viverra suspendisse potenti. Massa ultricies mi quis hendrerit dolor magna eget est. Felis eget velit aliquet sagittis id consectetur purus ut faucibus. Duis ultricies lacus sed turpis tincidunt id aliquet risus. Tortor at auctor urna nunc id cursus metus aliquam eleifend. Amet est placerat in egestas erat imperdiet.
+
+Ut porttitor leo a diam sollicitudin tempor id. In nulla posuere sollicitudin aliquam ultrices sagittis orci a. Integer enim neque volutpat ac tincidunt vitae semper quis. Lobortis elementum nibh tellus molestie nunc non blandit massa. Sit amet aliquam id diam maecenas ultricies mi. Orci sagittis eu volutpat odio facilisis mauris sit amet massa. Nisl rhoncus mattis rhoncus urna. Lacus luctus accumsan tortor posuere ac ut consequat. Urna neque viverra justo nec ultrices dui sapien eget mi. Sapien eget mi proin sed libero enim. Neque viverra justo nec ultrices dui sapien eget mi. Volutpat ac tincidunt vitae semper quis. Morbi enim nunc faucibus a pellentesque sit amet. Orci eu lobortis elementum nibh tellus. Ac orci phasellus egestas tellus rutrum. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Cursus eget nunc scelerisque viverra mauris in aliquam sem. Metus aliquam eleifend mi in. Elit eget gravida cum sociis natoque penatibus.
+      </design-modal>
     </div>
 </body>
 <script>
@@ -28,6 +44,10 @@
   btn.addEventListener('click', function () {
     modal.isOpen = true;
   });
+
+  modal.addEventListener('action', function() {
+    console.log('Confirm Pressed')
+  })
 
 </script>
 

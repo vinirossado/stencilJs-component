@@ -50,6 +50,7 @@ export class DesignModal {
 
   handleAction = () => {
     this.action.emit();
+    this.isOpen = false;
   }
 
     render() {
@@ -70,7 +71,7 @@ export class DesignModal {
               </div>
               <div class="footer">
                 {this._buttons.map((button, index) => (
-                  <design-button  text={button.text} appearance={index === 0 && this.appearance} />
+                  <design-button onClick={index == 0 ? this.handleAction: this.handleCancel}  text={button.text} appearance={index === 0 && this.appearance} />
                 ))}
               </div>
              </div>
