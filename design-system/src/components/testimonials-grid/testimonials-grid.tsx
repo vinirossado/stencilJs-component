@@ -46,7 +46,7 @@ export class TestimonialsGrid {
                 </p>
               </div>
 
-              <div class="card card--bg-purple">
+              <div class="card ">
                 <header class="card__header">
                   <img src={getAssetPath(`./assets/images/image-jeanette.jpg`)} class="card__img" alt="" />
                   <div>
@@ -93,21 +93,15 @@ export class TestimonialsGrid {
                 <p class="card__lead">
                   I received a job offer mid-course, and th subjects I learned were current, if not more so, in the company I joined.
                   I honestly feel i got every penny's worth
+                  I received a job offer mid-course, and th subjects I learned were current, if not more so, in the company I joined. I honestly feel i got every penny's worth
+                  I received a job offer mid-course, and th subjects I learned were current, if not more so, in the company I joined. I honestly feel i got every penny's worth
+
                 </p>
                 <p class="card__quote">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, sunt illo. Temporibus velit dolorem fuga eius explicabo perspiciatis, asperiores sit.
                 </p>
               </div>
-
-              <footer>
-                <h3>
-                  Project from
-                  <a href="google.com"> Frontend</a>
-                </h3>
-              </footer>
             </div>
-
-
         );
     }
 }
