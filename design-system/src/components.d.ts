@@ -31,6 +31,8 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface TestimonialsGrid {
+    }
 }
 export interface DesignModalCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -55,10 +57,17 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLTestimonialsGridElement extends Components.TestimonialsGrid, HTMLStencilElement {
+    }
+    var HTMLTestimonialsGridElement: {
+        prototype: HTMLTestimonialsGridElement;
+        new (): HTMLTestimonialsGridElement;
+    };
     interface HTMLElementTagNameMap {
         "design-button": HTMLDesignButtonElement;
         "design-modal": HTMLDesignModalElement;
         "my-component": HTMLMyComponentElement;
+        "testimonials-grid": HTMLTestimonialsGridElement;
     }
 }
 declare namespace LocalJSX {
@@ -88,10 +97,13 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface TestimonialsGrid {
+    }
     interface IntrinsicElements {
         "design-button": DesignButton;
         "design-modal": DesignModal;
         "my-component": MyComponent;
+        "testimonials-grid": TestimonialsGrid;
     }
 }
 export { LocalJSX as JSX };
@@ -101,6 +113,7 @@ declare module "@stencil/core" {
             "design-button": LocalJSX.DesignButton & JSXBase.HTMLAttributes<HTMLDesignButtonElement>;
             "design-modal": LocalJSX.DesignModal & JSXBase.HTMLAttributes<HTMLDesignModalElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "testimonials-grid": LocalJSX.TestimonialsGrid & JSXBase.HTMLAttributes<HTMLTestimonialsGridElement>;
         }
     }
 }
