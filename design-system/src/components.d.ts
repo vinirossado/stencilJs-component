@@ -17,6 +17,8 @@ export namespace Components {
         "header": string;
         "isOpen": boolean;
     }
+    interface GridAreas {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -49,6 +51,12 @@ declare global {
         prototype: HTMLDesignModalElement;
         new (): HTMLDesignModalElement;
     };
+    interface HTMLGridAreasElement extends Components.GridAreas, HTMLStencilElement {
+    }
+    var HTMLGridAreasElement: {
+        prototype: HTMLGridAreasElement;
+        new (): HTMLGridAreasElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -58,6 +66,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "design-button": HTMLDesignButtonElement;
         "design-modal": HTMLDesignModalElement;
+        "grid-areas": HTMLGridAreasElement;
         "my-component": HTMLMyComponentElement;
     }
 }
@@ -73,6 +82,8 @@ declare namespace LocalJSX {
         "header"?: string;
         "isOpen"?: boolean;
         "onAction"?: (event: DesignModalCustomEvent<any>) => void;
+    }
+    interface GridAreas {
     }
     interface MyComponent {
         /**
@@ -91,6 +102,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "design-button": DesignButton;
         "design-modal": DesignModal;
+        "grid-areas": GridAreas;
         "my-component": MyComponent;
     }
 }
@@ -100,6 +112,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "design-button": LocalJSX.DesignButton & JSXBase.HTMLAttributes<HTMLDesignButtonElement>;
             "design-modal": LocalJSX.DesignModal & JSXBase.HTMLAttributes<HTMLDesignModalElement>;
+            "grid-areas": LocalJSX.GridAreas & JSXBase.HTMLAttributes<HTMLGridAreasElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
