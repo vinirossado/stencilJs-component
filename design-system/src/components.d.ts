@@ -32,6 +32,11 @@ export namespace Components {
         "middle": string;
     }
     interface TestimonialsGrid {
+        "colorCard": string;
+        "img": string;
+        "lead": string;
+        "name": string;
+        "quote": string;
     }
 }
 export interface DesignModalCustomEvent<T> extends CustomEvent<T> {
@@ -98,6 +103,11 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface TestimonialsGrid {
+        "colorCard"?: string;
+        "img"?: string;
+        "lead"?: string;
+        "name"?: string;
+        "quote"?: string;
     }
     interface IntrinsicElements {
         "design-button": DesignButton;
